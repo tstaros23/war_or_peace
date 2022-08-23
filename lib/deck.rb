@@ -1,3 +1,5 @@
+require 'pry'
+
 class Deck
   attr_reader :cards
 
@@ -10,24 +12,9 @@ class Deck
 
   end
 
-  def high_ranking_cards(index)
-
-      cards[index >= 11].rank
-
-
-
-
-
-
-
-
-
-
-
+  def high_ranking_cards
+      high_ranked =  cards.select do |card|
+        card.rank >= 11
+      end
   end
-
-
-
-
-
 end
